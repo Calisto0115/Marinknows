@@ -1,0 +1,39 @@
+const NFTs = []
+
+function mintNFT(_name, _skinColor, _cap, _shades, _bling) {
+    const NFT = {
+        "name": _name,
+        "skinColor": _skinColor,
+        "cap": _cap,
+        "shades": _shades,
+        "bling": _bling
+    }
+    NFTs.push(NFT);
+    console.log("Minted: " + _name);
+}
+
+function listNFTs() {
+    for(let i = 0; i < NFTs.length; i++){
+        console.log("\nID: \t\t" + (i + 1));
+        console.log("\nName: \t\t" + NFTs[i].name);
+        console.log("SkinColor: \t" + NFTs[i].skinColor);
+        console.log("Cap: \t\t" + NFTs[i].cap);
+        console.log("Shades: \t" + NFTs[i].shades);
+        console.log("Bling: \t\t" + NFTs[i].bling);
+    }
+
+}
+
+// print the total number of NFTs we have minted to the console
+function getTotalSupply () {
+console.log(NFTs.length);
+}
+
+// call your functions below this line
+mintNFT("Banana", "Yellow", "Goldenstate", "rayban", "Diamond chain");
+mintNFT("Grips", "Purple", "cleveland", "persol", "gold chain");
+mintNFT("Maple", "Red", "lakers", "oakley", "gold chain");
+mintNFT("Limuel", "Green", "toronto", "carrera", "diamond chain");
+mintNFT("Calisto", "Orange", "dallas", "moscot", "gold chain");
+listNFTs();
+getTotalSupply();
